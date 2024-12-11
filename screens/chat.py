@@ -6,6 +6,7 @@ from utils.aux_functions import load_image, load_css
 def chat_screen():
     load_css('style.css')
     image = load_image('logo 2.png')
+    
     st.markdown(
     f"""
     <div style="display: flex; justify-content: center;">
