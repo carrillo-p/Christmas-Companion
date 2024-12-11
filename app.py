@@ -6,6 +6,7 @@ from screens.mesa import mesa_screen
 from screens.ruleta import ruleta_screen
 from screens.chat import chat_screen
 from screens.recomendador import recomendador_screen
+from screens.signup import signup_screen
 
 # MongoDB connection
 client = MongoClient('mongodb://mongodb:27017/')
@@ -69,6 +70,11 @@ else:
         change_screen('chat')
     if st.sidebar.button('Recomendador'):
         change_screen('recomendador')
+    if st.sidebar.button('Sign Up'):
+        signup_screen()
+    if st.sidebar.button('Logout'):
+        logout()
+    
 
 # Cambio de pantalla
 if st.session_state.logged_in:
@@ -84,5 +90,7 @@ if st.session_state.logged_in:
         chat_screen()
     elif st.session_state.screen == 'recomendador':
         recomendador_screen()
+    elif st.session_state.screen == 'signup':
+        signup_screen()
 else:
     st.write("Por favor, inicia sesión para acceder a la aplicación.")
