@@ -14,7 +14,7 @@ users_collection = db["users"]
 
 st.set_page_config(
     page_title = "Christmas Companion",
-    page_icon="🎄"
+    page_icon="🎄",
     layout="wide",
 )
 
