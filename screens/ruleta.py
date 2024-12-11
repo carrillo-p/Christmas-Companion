@@ -35,6 +35,7 @@ def check_secret_santa_assigned(family_group):
 
 
 def ruleta_screen():
+    load_css('style.css')
     image = load_image('logo 2.png')
     st.markdown(
     f"""

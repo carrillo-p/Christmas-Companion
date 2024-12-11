@@ -67,12 +67,8 @@ else:
         change_screen('mesa')
     if st.sidebar.button('Ruleta'):
         change_screen('ruleta')
-    if st.sidebar.button('Recetas'):
-        change_screen('recetas')
-    if st.sidebar.button('Recomendador'):
-        change_screen('recomendador')
-    if st.sidebar.button('Playlist'):
-        change_screen('playlist')
+    if st.sidebar.button('Chat'):
+        change_screen('chat')
     if st.sidebar.button('Tarjeta'):
         change_screen('tarjeta')
 
@@ -86,12 +82,8 @@ if st.session_state.logged_in:
         mesa_screen()
     elif st.session_state.screen == 'ruleta':
         ruleta_screen()
-    elif st.session_state.screen == 'recetas':
-        recetas_screen()
-    elif st.session_state.screen == 'recomendador':
-        recomendador_screen()
-    elif st.session_state.screen == 'playlist':
-        playlist_screen()
+    elif st.session_state.screen == 'chat':
+        chat_screen()
     elif st.session_state.screen == 'tarjeta':
         tarjeta_screen()
 else:
