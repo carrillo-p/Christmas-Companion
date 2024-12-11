@@ -8,9 +8,9 @@ from screens.chat import chat_screen
 from screens.recomendador import recomendador_screen
 
 #MongoDB connection
-client = MongoClient('localhost', 27017)
-db = client["christmas_companion"]
-users_collection = db["users"]
+#client = MongoClient('localhost', 27017)
+#db = client["christmas_companion"]
+#users_collection = db["users"]
 
 st.set_page_config(
     page_title = "Christmas Companion",
@@ -48,7 +48,7 @@ if not st.session_state.logged_in:
     username = st.sidebar.text_input("Username")
     password = st.sidebar.text_input("Password", type="password")
     if st.sidebar.button("Login"):
-        if login(username, password):
+        if (username == "admin" and password == "admin"):
             st.sidebar.success("Logged in as {}".format(username))
         else:
             st.sidebar.error("Invalid username or password")
