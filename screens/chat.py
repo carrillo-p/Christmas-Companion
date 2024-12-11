@@ -35,27 +35,31 @@ def chat_screen():
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
         }
         .user-message {
-            background-color: #ff2a6d;
-            color: white;
-            padding: 10px 15px;
+            background-color: #d42426;
+            color: #ffffff;
+            padding: 12px 18px;
             border-radius: 15px 15px 0 15px;
-            margin: 5px 0;
+            margin: 8px 0;
             max-width: 70%;
             margin-left: auto;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
         .bot-message {
-            background-color: #2d2d44;
-            color: #d1d7e0;
-            padding: 10px 15px;
+            background-color: #2d5a27;
+            color: #ffffff;
+            padding: 12px 18px;
             border-radius: 15px 15px 15px 0;
-            margin: 5px 0;
+            margin: 8px 0;
             max-width: 70%;
-            border: 1px solid #05d9e8;
+            border: 1px solid #467f3f;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
         }
         .typing-indicator {
-            color: #05d9e8;
+            color: #1b371a;
             padding: 10px;
             font-style: italic;
         }
@@ -64,9 +68,10 @@ def chat_screen():
             bottom: 20px;
             width: 100%;
             max-width: 800px;
-            background-color: white;
+            background-color: #ffffff;
             padding: 10px;
             border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
         </style>
     """, unsafe_allow_html=True)
