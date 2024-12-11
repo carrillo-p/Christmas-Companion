@@ -93,7 +93,7 @@ if st.session_state.logged_in:
         chat_screen()
     elif st.session_state.screen == 'recomendador':
         recomendador_screen()
-    elif st.session_state_screen == 'tarjetas':
+    elif st.session_state.screen == 'tarjetas':
         tarjetas_screen()
     elif st.session_state.screen == 'signup':
         signup_screen()
