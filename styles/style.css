@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Mountains+of+Christmas:wght@700&display=swap');
 
 :root {
-    --christmas-red: #c41e3a;
-    --christmas-green: #1a472a;
-    --dark-text: #2C3E50;
-    --light-text: #ECF0F1;
-    --accent-gold: #FFD700;
+    --christmas-red: #d42426;
+    --christmas-red-light: #e85d5f;
+    --christmas-red-dark: #961a1c;
+    --christmas-green: #2d5a27;
+    --christmas-green-light: #467f3f;
+    --christmas-green-dark: #1b371a;
+    --dark-text: #333333;
+    --light-text: #ffffff;
+    --accent-gold: #ffc857;
 }
 
 /* Global styles */
@@ -42,22 +46,22 @@ body {
     border-radius: 4px;
     padding: 8px 16px;
     font-weight: 600;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .stButton > button:hover {
-    opacity: 0.9;
+    background-color: var(--christmas-red-dark);
 }
 
 /* Success messages */
 .stSuccess {
-    color: var(--christmas-green);
+    color: var(--christmas-green-dark);
     border-left: 4px solid var(--christmas-green);
 }
 
 /* Error messages */
 .stError {
-    color: var(--christmas-red);
+    color: var(--christmas-red-dark);
     border-left: 4px solid var(--christmas-red);
 }
 
@@ -71,7 +75,7 @@ p, .stMarkdown {
 /* Headings */
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--christmas-green);
+    color: var(--christmas-green-dark);
     margin: 20px 0 10px 0;
 }
 
@@ -80,12 +84,12 @@ a {
     color: var(--christmas-red);
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 a:hover {
+    color: var(--christmas-red-dark);
     border-bottom-color: var(--christmas-red);
-    text-decoration: none;
 }
 
 /* Accent elements */
