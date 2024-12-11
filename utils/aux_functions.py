@@ -13,6 +13,7 @@ def load_image(image_name):
         return base64.b64encode(image_file.read()).decode()
 
 def load_css(file_name):
+
     project_root = get_project_root()
     css_path = os.path.join(project_root, 'styles', file_name)
     with open(css_path) as f:
