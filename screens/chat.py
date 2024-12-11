@@ -2,6 +2,7 @@ import streamlit as st
 from time import sleep
 import random
 from utils.aux_functions import load_image, load_css
+from api import api_openai
 
 def chat_screen():
     load_css('style.css')
@@ -99,8 +100,9 @@ def chat_screen():
                 sleep(random.uniform(0.5, 1.5))
                 
                 # Add AI response
-                ai_response = f"This is a simulated response to: {user_message}"
-                st.session_state.messages.append({"role": "assistant", "content": ai_response})
+                # ai_response = f"This is a simulated response to: {user_message}"
+                response = api_openai(user_message)
+                st.session_state.messages.append({"role": "assistant", "content": response})
                 
                 # Clear typing indicator and input
                 typing_placeholder.empty()
