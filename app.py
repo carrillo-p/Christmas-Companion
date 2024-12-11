@@ -4,10 +4,8 @@ from screens.home import home_screen
 from screens.profile import profile_screen
 from screens.mesa import mesa_screen
 from screens.ruleta import ruleta_screen
-from screens.recetas import recetas_screen
+from screens.chat import chat_screen
 from screens.recomendador import recomendador_screen
-from screens.playlist import playlist_screen
-from screens.tarjeta import tarjeta_screen
 
 #MongoDB connection
 client = MongoClient('localhost', 27017)
@@ -69,8 +67,8 @@ else:
         change_screen('ruleta')
     if st.sidebar.button('Chat'):
         change_screen('chat')
-    if st.sidebar.button('Tarjeta'):
-        change_screen('tarjeta')
+    if st.sidebar.button('Recomendador'):
+        change_screen('recomendador')
 
 # Cambio de pantalla
 if st.session_state.logged_in:
@@ -84,7 +82,8 @@ if st.session_state.logged_in:
         ruleta_screen()
     elif st.session_state.screen == 'chat':
         chat_screen()
-    elif st.session_state.screen == 'tarjeta':
-        tarjeta_screen()
+    elif st.session_state.screen == 'recomendador':
+        recomendador_screen()
+
 else:
     st.write("Por favor, inicia sesión para acceder a la aplicación.")
