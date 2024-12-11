@@ -2,6 +2,7 @@ import streamlit as st
 from utils.aux_functions import load_css, load_image
 from pymongo import MongoClient
 import requests
+from api import api_openai
 
 client = MongoClient("mongodb://localhost:27017/")
 db = client["christmas_companion"]
@@ -17,13 +18,14 @@ def get_ai_recommendations(recipient_data):
     """
     
     # Simulate API response
-    recommendations = [
-        {"gift": "Wireless Headphones", "reason": "Based on their music interests"},
-        {"gift": "Cooking Class", "reason": "Given their food preferences"},
-        {"gift": "Concert Tickets", "reason": "Matches their musical taste"},
-        {"gift": "Hobby Kit", "reason": "Aligns with their interests"},
-        {"gift": "Gift Card", "reason": "For flexibility in choice"}
-    ]
+    # recommendations = [
+    #     {"gift": "Wireless Headphones", "reason": "Based on their music interests"},
+    #     {"gift": "Cooking Class", "reason": "Given their food preferences"},
+    #     {"gift": "Concert Tickets", "reason": "Matches their musical taste"},
+    #     {"gift": "Hobby Kit", "reason": "Aligns with their interests"},
+    #     {"gift": "Gift Card", "reason": "For flexibility in choice"}
+    # ]
+    recommendations = api_openai(prompt)
     return recommendations
 
 def recomendador_screen():
